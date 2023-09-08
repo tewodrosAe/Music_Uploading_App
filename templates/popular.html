@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %} Popular {% endblock %}
+{% block main %}
+<div id="together"></div>
+    <video src="/static/video/Music Mix - Equalizer Music Visualizer (test 7) BIG DATA.mp4" controls muted id="video"></video>
+    <section class="contains">
+        <section class="contained">
+            <section class="contents">
+                <h1 style="text-align: center; font-size:30px; margin-bottom: 20px; color: white; font-weight: 500; line-height: 40px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  ; letter-spacing: 1px;">POPULAR</h1>
+                {% if musics|length > 0 %}
+                {% for i in range(0,musics|length) %}
+                    <div class="user_names" >Uploaded by: <form action="/searchUser" method="post"><input type="text" name="user" hidden="hidden" class="user_input"><button class="btn_name" style="background: transparent; color:white; border:none;" type="submit">{{ musics[i].username }}</button></form></div>
+                        <ol >
+                            <li class="title" > {{ musics[i].title }}</li>
+                            <input type="range" min="0" max="100" value="0" id="slider">
+                            <li class="album" style="position: absolute; left:45%; top:10%;">{{ musics[i].artist }}</li>
+                            <li><i class="fa fa-play-circle" aria-hidden="true"></i><i class="fa fa-pause-circle" aria-hidden="true" style=" visibility: hidden;"></i></li>
+                            <li class="timer"> <div class="start">0:00</div><div class="end"></div></li>
+                            <i class="fa fa-volume-up"></i>
+                            <i class="fa fa-volume-off" aria-hidden="true"></i>
+                            <input type="range" min="0" max="100" value="50" id="volume_slider">
+                            <li class="album">{{ musics[i].album }}</li>
+                        </ol>
+                        <audio controls hidden="hidden" class="audio">
+                                <source src="/static/music/{{ musics[i].title }}.mp3" type="audio/mpeg">
+                        </audio>
+
+                {% endfor %}
+                {% else %}
+                        <h1 class="nothing_found">Nothing Found <i class="fa fa-frown-o " style="color: red;" aria-hidden="true"></i> </h1>
+                {% endif %}
+            </section>
+        </section>
+    </section>
+
+{% endblock %}

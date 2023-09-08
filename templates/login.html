@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %} Login {% endblock %}
+{% block main %} 
+<main>
+    <div class="loginsa">
+        <div class="containersa">
+                <div class="cardfrontsa">
+                    <h1>LOGIN</h1>
+                    <form action="/login" method="post" class="form">
+                        <input type="text" name="username" placeholder="Username..." required>
+                        <input type="password" name="password" class = "password"placeholder="Password..." required>
+                        <div class="error"></div>
+                        <button type="submit" class="submit">Login</button>
+                    </form>
+                    <button id="register">Register</button>
+                </div>
+                <div class="cardbacksa">
+                    <h1>REGISTER</h1>
+                    <form action = "/register" method="post" class="formsa">
+                        <input type="text" name="username"class="name" placeholder="Username..." required>
+                        <input type="email" name="email" class="email"placeholder="Email address..." required>
+                        <input type="password" name="password" class = "password" placeholder="Password..." required>
+                        <input type="password" name="confirm" class="confirm"placeholder="Confirm Password..." required>
+                        <div class="errors"></div>
+                        <button type="submit" class="submit">Register</button>
+                    </form>
+                    <button id="login">Login</button>
+                </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

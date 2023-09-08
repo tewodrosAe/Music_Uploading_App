@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %} Me {% endblock %}
+{% block main %} 
+<!--<div class="all">
+    <h1>{{ name }}</h1>
+    <div class="infosa">
+        <div class="email">Email - {{ email }}</div>
+        <div class="date">Created - {{ date }}</div>
+    </div>
+    
+</div>-->
+
+
+<section class="vh-100" style="background-color : #202133;">
+  <div class="container py-5 h-100" >
+    <div class="row d-flex justify-content-center align-items-center h-100" >
+      <div class="col col-lg-6 mb-4 mb-lg-0" >
+        <div class="card mb-3" style="border-radius: .5rem; background: transparent; color: WHITE;">
+          <div class="row g-0">
+            <div class="mine" style="display: flex;">
+            <div class="col-md-4 gradient-custom text-center text-white" 
+                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem; font-weight: bold;" >
+               {% if path_finder(Paths) %}
+                  <img src="/static/profile pic/{{ names }}.jpg  " 
+                      alt="Avatar" class="img-fluid my-5"  id="pp" />
+                {% else %}
+                  <img src="/static/img/unnamed.webp" 
+                  alt="Avatar" class="img-fluid my-5"  id="pp" />
+                {% endif %}
+              
+                <h5 style="font-weight: bold;">{{ names }}</h5>
+                <p>Musician</p>
+                <i class="fa fa-heartbeat" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6>Information</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Email</h6>
+                    <p class="text-muted" style="position: absolute;"> {{email}} </p>
+                  </div>
+                </div>
+                <h6 style="margin-top: 40px;">Cash</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6>Recent donates</h6>
+                    <p class="text-muted">XXXX</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6>Current</h6>
+                    <p class="text-muted">XXXX<i class="fa fa-credit-card-alt" aria-hidden="true" style="transform: scale(0.8);"></i></p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                  <a href="#!"><i class="fa fa-facebook-f fa-lg me-3"></i></a>
+                  <a href="#!"><i class="fa fa-twitter fa-lg me-3"></i></a>
+                  <a href="#!"><i class="fa fa-instagram fa-lg"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock %}

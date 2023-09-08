@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block main %}
+<main>
+  <div class ="bodies">
+      <h1 class="h1i">GMusic</h1>
+      <div id="bodi">
+        <form action="/search" method="post" >
+          <div><input type="search" name = "search" placeholder="Search music, musician...">
+      <!--<div class="guess">Ghostface Playa <hr style="color:black; margin-top: 4px; width: 70%; " ></div>--></div>
+      <button type="submit" name="searched"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headphones" viewBox="0 0 16 16">
+          <path d="M8 3a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a6 6 0 1 1 12 0v5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1V8a5 5 0 0 0-5-5z"/>
+        </svg></button></div></form>
+  </div>
+<div class="all">
+  <section class="info">
+    <div class="containera">
+      <h2 class="main-title">About</h2>
+      <div class="content">
+        <div class="images">
+          <img src="/static/img/img1.jpg" alt="">
+        </div>
+        <div class="text-box">
+          <h3>What we do</h3>
+          <p>We are a music company who strive to empower the different 
+            artists who have talents that are yet to be recognized. Our 
+            aim is to give artists the stage to follow their dreams and 
+            be their first step to becoming known globally
+          </p> 
+        </div> 
+      </div>
+    </div>
+  </section>
+  <hr></hr>
+  <section class="info2">
+    <div class="containera">
+      <h3 class="section-two">Mechanics</h3>
+      <div class="content">
+        <div class="im">
+          <i class="fa fa-music" aria-hidden="true"></i>
+        </div>
+        <div class="infos">
+          <h4 class="info-title">Description</h4>
+          <p> A creator/artist will make music and upload it here and people
+            will listen and rate it and thus help the creator grow. We also 
+            have created a way in which listeners can help the artists they love 
+            grow, on the top right there is a donate button, in which you can directly
+            help your favourite creators
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+{% endblock %}

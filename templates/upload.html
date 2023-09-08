@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %} Upload {% endblock %} 
+{% block main %} 
+    <img src="/static/img/upload.jpg" alt="upload" class="bg3">
+    <div class="cont">
+        <div class="in">
+            <div class="conte">
+                <h3>UPLOAD</h3>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <i class="fa fa-cloud-upload" aria-hidden="true" id="inoi"></i>
+                    <div id="nana"> <p>Choose a file from your computer to upload</p>
+                    You should choose only compatible formats(mp3,wav  )</div>
+                    <div id="fila" >Name: </div>
+                    <button type="button" class="btn btn-primary" id="poos">Continue<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-primary" id="poo">Choose File <i class="fa fa-file" aria-hidden="true"></i></button>
+                    <input type="file" name="file" id="file" hidden="hidden" accept=".mp3">
+                    <div class="valid">
+                        <div class="rowin">Title:  <input type="text" placeholder="Song title..." name="music" required></div>
+                        <div class="rowin">Artist: <input type="text" placeholder="Artist..." name="artist" required></div>
+                        <div class="rowin">Album:  <input type="text" placeholder="Album..." name="album" required></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="soop">Upload<i class="fa fa-upload" aria-hidden="true"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
