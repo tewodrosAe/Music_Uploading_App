@@ -13,6 +13,7 @@ import csv
 import json
 from io import BytesIO
 from urllib import response
+from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session,jsonify
 from flask_session import Session
 from tempfile import mkdtemp
@@ -34,8 +35,7 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 #dir
-currentdirectory = os.path.dirname(os.path.abspath(__file__))
-db = sqlite3.connect(currentdirectory + '\music.db')
+db = SQL("sqlite:///music.db")
 
 # Configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_PERMANENT"] = False
