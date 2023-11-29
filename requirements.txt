@@ -1,4 +1,4 @@
 flask==2.2.2
 cs50
 flask_session
-werkzeug.security
+Werkzeug==2.2.2
