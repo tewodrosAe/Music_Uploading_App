@@ -1,5 +1,3 @@
-
-from crypt import methods
 import email
 from genericpath import exists
 from imp import reload
