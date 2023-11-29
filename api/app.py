@@ -34,7 +34,7 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-#dir
+#db
 db = SQL("sqlite:///music.db")
 
 # Configure session to use filesystem (instead of signed cookies)
